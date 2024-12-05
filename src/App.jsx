@@ -57,7 +57,7 @@ function App() {
    
     <div className="w-full max-w-xl mx-auto shadow-lg rounded-lg px-4 py-3 my-20 bg-gray-800 text-purple-500 text-lg ">
       <h1 className='text-white text-xl text-center my-3'>Create Your Password !</h1>
-    <div className="flex shadow rounded-lg overflow-hidden mb-6">
+     <div className="flex shadow rounded-lg overflow-hidden mb-6">
         <input
             type="text"
             value={password}
@@ -68,10 +68,11 @@ function App() {
         />
         <button
         onClick={copyPassWordToClipBoard}
-         className='flex outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0 leading-loose'>Copy</button>
+         className='flex outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0 leading-loose'>Copy
+         </button>
       </div>
-      <div className='flex text-sm gap-x-4'>
-        <div className='flex items-center gap-x-2'>
+      <div className='flex flex-wrap flex-col sm:flex-col md:flex-row gap-y-4 sm:gap-x-4 sm:gap-y-4'>
+        <div className='flex items-center gap-x-2 sm:flex-col sm:gap-y-2'>
           <input 
           type='range'
           min={6}
@@ -82,7 +83,7 @@ function App() {
            />
            <label className='text-lg'>Length: {length}</label>
         </div>
-        <div className='flex items-center gap-x-1'>
+        <div className='flex items-center gap-x-1 sm:flex-col sm:gap-y-2'>
           <input
           type='checkbox'
           defaultChecked={numberAllowed}
@@ -93,7 +94,7 @@ function App() {
           />
           <label htmlFor='numberInput' className='text-white text-lg'>Numbers</label>
         </div>
-        <div className='flex items-center gap-x-1'>
+        <div className='flex items-center gap-x-1 sm:flex-col sm:gap-y-2'>
           <input
           type='checkbox'
           defaultChecked={charAllowed}
