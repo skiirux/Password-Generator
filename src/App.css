@@ -1,0 +1,43 @@
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.background-container {
+  position: relative; /* Enables layering of content */
+  height: 100vh; /* Full height */
+  width: 100vw; /* Full width */
+  overflow: hidden;
+}
+
+.background-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("./assets/bg.jpg"); /* Replace with your image */
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: center;
+  filter: blur(8px) brightness(60%); /* Blur and darken */
+  z-index: 1; /* Place below content */
+}
+
+.content-container {
+  position: relative;
+  z-index: 2; /* Place above background */
+  color: white; /* Text color */
+  text-align: center; /* Center-align text */
+  padding: 20px;
+}
+
+
+
+
+
+button:hover {
+  background-color: #0056b3;
+}
